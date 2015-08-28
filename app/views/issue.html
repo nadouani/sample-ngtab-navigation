@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="well">
+        <h2>Issue Header
+            <span><a ui-sref="issue-list" class="pull-right">Back to list</a></span>
+        </h2>
+    </div>
+
+    <tabset type="tabs" justified="false">
+        <tab ng-repeat="tab in tabs" ng-click="openTab(tab.name)" active="tab.active">
+            <tab-heading>
+                {{tab.label}}
+                <a href ng-if="tab.closable" ng-click="removeTab(tab.name)">
+                    <i class="text-muted glyphicon glyphicon-remove-circle"></i>
+                </a>
+            </tab-heading>
+        </tab>
+    </tabset>
+
+    <div ui-view/></div>
+</div>

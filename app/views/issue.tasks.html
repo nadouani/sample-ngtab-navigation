@@ -1,0 +1,11 @@
+<h3>Tasks List</h3>
+<p>
+    This page calls the tasks web service to get the list
+</p>
+<table>
+    <tr ng-repeat="task in tasks">
+        <td>
+            <a ui-sref="issue.task-item({item: task.id})">{{task.name}}</a>
+        </td>
+    </tr>
+</table>
