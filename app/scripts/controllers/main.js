@@ -18,7 +18,7 @@ angular.module('tabnavApp')
         $scope.removeTab = function (tab) {
             TabsState.removeTab(tab);
 
-            $scope.goTo('details');
+            $scope.openTab('details');
         };
     })
     .controller('TasksListController', function ($scope, $state, TasksRepo, TabsState) {
